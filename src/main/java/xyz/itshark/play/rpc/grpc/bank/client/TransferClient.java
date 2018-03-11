@@ -17,6 +17,7 @@ public class TransferClient {
 				.usePlaintext(true)
 				.build();
 		
+		// Blocking client
 		BankBlockingStub client = BankGrpc.newBlockingStub(channel);
 		
 		System.out.println(">>>>>>>>> Send Transfer Request 1");
