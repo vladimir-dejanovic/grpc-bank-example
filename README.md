@@ -21,20 +21,20 @@ mvn clean install
 This example consists of example gRPC Bank Server which expose multiple services and gRPC clients for calling those services. 
 
 
-* To Start Bank server run this command
+To Start Bank server run this command
 
 ```
   mvn exec:java -Dexec.mainClass=xyz.itshark.play.rpc.grpc.bank.BankServer
 ```
 
-* To request transfer run this command
+To request transfer run this command
 
 ```
 mvn exec:java -Dexec.mainClass=xyz.itshark.play.rpc.grpc.bank.client.RequestClient
 ```
 
 
-* Transfer money from account 1 to account 2
+Transfer money from account 1 to account 2
 
 ```
 mvn exec:java -Dexec.mainClass=xyz.itshark.play.rpc.grpc.bank.client.TransferClient
