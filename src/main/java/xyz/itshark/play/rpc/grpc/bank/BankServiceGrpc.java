@@ -110,8 +110,25 @@ public class BankServiceGrpc extends BankGrpc.BankImplBase {
 			}
 		};
 	}
-	
-	
+		
+	@Override
+	public void listenToNotifications(Account request, StreamObserver<AccountNotification> responseObserver) {
+		Queue<AccountNotification> que = map.get(request.getAccountNumber());
+
+		while (1 > 0) {
+			if (!que.isEmpty())
+				responseObserver.onNext(que.poll());
+			else {
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+
+	}
 
 	private void processRequest(int fromAccount, int toAccount, double ammount) {
 		if (accounts[fromAccount] < ammount) {
