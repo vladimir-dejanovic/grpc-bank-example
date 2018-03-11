@@ -1,6 +1,5 @@
 # Compiled class file
 *.class
-
 target
 
 # temp files
@@ -15,6 +14,11 @@ target
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+
+# eclipse files
+.classpath
+.project
+
 
 # Package Files #
 *.jar
