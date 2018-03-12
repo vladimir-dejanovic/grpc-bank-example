@@ -34,6 +34,12 @@ mvn exec:java -Dexec.mainClass=xyz.itshark.play.rpc.grpc.bank.client.Notificatio
 mvn exec:java -Dexec.mainClass=xyz.itshark.play.rpc.grpc.bank.client.NotificationsConsoleClient -Dexec.args="2"
 ```
 
+Notifications JavaFX client
+
+```
+mvn exec:java -Dexec.mainClass=xyz.itshark.play.rpc.grpc.bank.client.NotificationsJavaFXClient
+```
+
 Transfer money from account 1 to account 2
 
 ```
