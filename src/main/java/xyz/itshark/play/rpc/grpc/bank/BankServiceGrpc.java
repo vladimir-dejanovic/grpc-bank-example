@@ -115,6 +115,7 @@ public class BankServiceGrpc extends BankGrpc.BankImplBase {
 	public void listenToNotifications(Account request, StreamObserver<AccountNotification> responseObserver) {
 		Queue<AccountNotification> que = map.get(request.getAccountNumber());
 
+		// not the best code I agree :D
 		while (1 > 0) {
 			if (!que.isEmpty())
 				responseObserver.onNext(que.poll());

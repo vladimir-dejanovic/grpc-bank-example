@@ -27,15 +27,21 @@ To Start Bank server run this command
   mvn exec:java -Dexec.mainClass=xyz.itshark.play.rpc.grpc.bank.BankServer
 ```
 
-To request transfer run this command
+Notifications Console Client 
 
 ```
-mvn exec:java -Dexec.mainClass=xyz.itshark.play.rpc.grpc.bank.client.RequestClient
+mvn exec:java -Dexec.mainClass=xyz.itshark.play.rpc.grpc.bank.client.NotificationsConsoleClient -Dexec.args="1"
+mvn exec:java -Dexec.mainClass=xyz.itshark.play.rpc.grpc.bank.client.NotificationsConsoleClient -Dexec.args="2"
 ```
-
 
 Transfer money from account 1 to account 2
 
 ```
 mvn exec:java -Dexec.mainClass=xyz.itshark.play.rpc.grpc.bank.client.TransferClient
+```
+
+To request transfer run this command
+
+```
+mvn exec:java -Dexec.mainClass=xyz.itshark.play.rpc.grpc.bank.client.RequestClient
 ```
