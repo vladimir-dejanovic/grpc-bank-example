@@ -2,6 +2,10 @@
 *.class
 target
 
+# intelij files
+.idea
+*.iml
+
 # temp files
 *~
 *#
